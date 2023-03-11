@@ -1,10 +1,17 @@
 const express = require('express');
+const routes = require('./lib/route');
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello, There!');
+app.use(express.json());
+app.use(routes);
+// Handling Errors
+app.use((err, req, res, next) => {
+    // console.log(err);
+    err.statusCode = err.statusCode || 500;
+    err.message = err.message || "Internal Server Error";
+    res.status(err.statusCode).json({
+      message: err.message,
+    });
 });
 
-app.listen(8000, () => {
-  console.log('Server started on port 8000');
-});
+app.listen(3000,() => console.log('Server is running on port 3000'));
