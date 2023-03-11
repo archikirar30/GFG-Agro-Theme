@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
     return (
         <>
-            <footer className="footer-area bg-img" style={{backgroundImage: "url(img/bg-img/3.jpg)" }} >
+            <footer className="footer-area bg-img" style={{backgroundImage: "url(assets/img/bg-img/3.jpg)" }} >
                 {/* <!-- Main Footer Area --> */}
                 <div className="main-footer-area">
                     <div className="container">

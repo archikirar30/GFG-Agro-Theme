@@ -5,11 +5,11 @@ export default function Welcome() {
         <>
             {/* <!-- ##### Hero Area Start ##### --> */}
             <section className="hero-area">
-                <div className="hero-post-slides owl-carousel">
+                <div className="hero-post-slides owl-carousel owl-theme">
                     {/* <!-- Single Hero Post --> */}
                     <div className="single-hero-post bg-overlay">
                         {/* <!-- Post Image --> */}
-                        <div className="slide-img bg-img" style={{backgroundImage: "url('assets/img/bg-img/1.jpg')" }}></div>
+                        <div className="slide-img bg-img" style={{ backgroundImage: `url("assets/img/bg-img/1.jpg")` }}></div>
                         <div className="container h-100">
                             <div className="row h-100 align-items-center">
                                 <div className="col-12">
@@ -30,7 +30,7 @@ export default function Welcome() {
                     {/* <!-- Single Hero Post --> */}
                     <div className="single-hero-post bg-overlay">
                         {/* <!-- Post Image --> */}
-                        <div className="slide-img bg-img" style={{backgroundImage: "url('assets/img/bg-img/2.jpg')"}}></div>
+                        <div className="slide-img bg-img" style={{ backgroundImage: `url("assets/img/bg-img/2.jpg")` }}></div>
                         <div className="container h-100">
                             <div className="row h-100 align-items-center">
                                 <div className="col-12">
@@ -113,12 +113,26 @@ export default function Welcome() {
                         <div className="col-12 col-lg-6">
                             <div className="alazea-video-area bg-overlay mb-100">
                                 <img src="assets/img/bg-img/23.jpg" alt="" />
-                                    <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" className="video-icon">
-                                        <i className="fa fa-play" aria-hidden="true"></i>
-                                    </a>
+                                <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" className="video-icon">
+                                    <i className="fa fa-play" aria-hidden="true"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="owl-carousel">
+                    <div class="item"><h4>1</h4></div>
+                    <div class="item"><h4>2</h4></div>
+                    <div class="item"><h4>3</h4></div>
+                    <div class="item"><h4>4</h4></div>
+                    <div class="item"><h4>5</h4></div>
+                    <div class="item"><h4>6</h4></div>
+                    <div class="item"><h4>7</h4></div>
+                    <div class="item"><h4>8</h4></div>
+                    <div class="item"><h4>9</h4></div>
+                    <div class="item"><h4>10</h4></div>
+                    <div class="item"><h4>11</h4></div>
+                    <div class="item"><h4>12</h4></div>
                 </div>
             </section>
             {/* <!-- ##### Service Area End ##### --> */}
@@ -190,8 +204,8 @@ export default function Welcome() {
                                     <div className="col-12 col-sm-6">
                                         <div className="single-benefits-area">
                                             <img src="assets/img/core-img/b1.png" alt="" />
-                                                <h5>Quality Products</h5>
-                                                <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                            <h5>Quality Products</h5>
+                                            <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
                                         </div>
                                     </div>
 
@@ -199,8 +213,8 @@ export default function Welcome() {
                                     <div className="col-12 col-sm-6">
                                         <div className="single-benefits-area">
                                             <img src="assets/img/core-img/b2.png" alt="" />
-                                                <h5>Perfect Service</h5>
-                                                <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                            <h5>Perfect Service</h5>
+                                            <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
                                         </div>
                                     </div>
 
@@ -208,8 +222,8 @@ export default function Welcome() {
                                     <div className="col-12 col-sm-6">
                                         <div className="single-benefits-area">
                                             <img src="assets/img/core-img/b3.png" alt="" />
-                                                <h5>100% Natural</h5>
-                                                <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                            <h5>100% Natural</h5>
+                                            <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
                                         </div>
                                     </div>
 
@@ -217,8 +231,8 @@ export default function Welcome() {
                                     <div className="col-12 col-sm-6">
                                         <div className="single-benefits-area">
                                             <img src="assets/img/core-img/b4.png" alt="" />
-                                                <h5>Environmentally friendly</h5>
-                                                <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                            <h5>Environmentally friendly</h5>
+                                            <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -271,7 +285,7 @@ export default function Welcome() {
                         {/* <!-- Single Portfolio Area --> */}
                         <div className="col-12 col-sm-6 col-lg-3 single_portfolio_item design home-design wow fadeInUp" data-wow-delay="100ms">
                             {/* <!-- Portfolio Thumbnail --> */}
-                            <div className="portfolio-thumbnail bg-img" style={{backgroundImage: "url(assets/img/bg-img/16.jpg)"}}></div>
+                            <div className="portfolio-thumbnail bg-img" style={{ backgroundImage: "url(assets/img/bg-img/16.jpg)" }}></div>
                             {/* <!-- Portfolio Hover Text --> */}
                             <div className="portfolio-hover-overlay">
                                 <a href="img/bg-img/16.jpg" className="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 1">
@@ -286,7 +300,7 @@ export default function Welcome() {
                         {/* <!-- Single Portfolio Area --> */}
                         <div className="col-12 col-sm-6 col-lg-3 single_portfolio_item garden wow fadeInUp" data-wow-delay="200ms">
                             {/* <!-- Portfolio Thumbnail --> */}
-                            <div className="portfolio-thumbnail bg-img" style={{backgroundImage: "url(assets/img/bg-img/17.jpg)"}}></div>
+                            <div className="portfolio-thumbnail bg-img" style={{ backgroundImage: "url(assets/img/bg-img/17.jpg)" }}></div>
                             {/* <!-- Portfolio Hover Text --> */}
                             <div className="portfolio-hover-overlay">
                                 <a href="img/bg-img/17.jpg" className="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 2">
@@ -301,7 +315,7 @@ export default function Welcome() {
                         {/* <!-- Single Portfolio Area --> */}
                         <div className="col-12 col-sm-6 col-lg-3 single_portfolio_item garden design wow fadeInUp" data-wow-delay="300ms">
                             {/* <!-- Portfolio Thumbnail --> */}
-                            <div className="portfolio-thumbnail bg-img" style={{backgroundImage: "url(assets/img/bg-img/18.jpg)"}}></div>
+                            <div className="portfolio-thumbnail bg-img" style={{ backgroundImage: "url(assets/img/bg-img/18.jpg)" }}></div>
                             {/* <!-- Portfolio Hover Text --> */}
                             <div className="portfolio-hover-overlay">
                                 <a href="img/bg-img/18.jpg" className="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 3">
@@ -316,7 +330,7 @@ export default function Welcome() {
                         {/* <!-- Single Portfolio Area --> */}
                         <div className="col-12 col-sm-6 col-lg-3 single_portfolio_item garden office-design wow fadeInUp" data-wow-delay="400ms">
                             {/* <!-- Portfolio Thumbnail --> */}
-                            <div className="portfolio-thumbnail bg-img" style={{backgroundImage: "url(assets/img/bg-img/19.jpg)"}}></div>
+                            <div className="portfolio-thumbnail bg-img" style={{ backgroundImage: "url(assets/img/bg-img/19.jpg)" }}></div>
                             {/* <!-- Portfolio Hover Text --> */}
                             <div className="portfolio-hover-overlay">
                                 <a href="img/bg-img/19.jpg" className="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 4">
@@ -331,7 +345,7 @@ export default function Welcome() {
                         {/* <!-- Single Portfolio Area --> */}
                         <div className="col-12 col-sm-6 col-lg-3 single_portfolio_item design office-design wow fadeInUp" data-wow-delay="100ms">
                             {/* <!-- Portfolio Thumbnail --> */}
-                            <div className="portfolio-thumbnail bg-img" style={{backgroundImage: "url(assets/img/bg-img/20.jpg)"}}></div>
+                            <div className="portfolio-thumbnail bg-img" style={{ backgroundImage: "url(assets/img/bg-img/20.jpg)" }}></div>
                             {/* <!-- Portfolio Hover Text --> */}
                             <div className="portfolio-hover-overlay">
                                 <a href="img/bg-img/20.jpg" className="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 5">
@@ -346,7 +360,7 @@ export default function Welcome() {
                         {/* <!-- Single Portfolio Area --> */}
                         <div className="col-12 col-sm-6 col-lg-3 single_portfolio_item garden wow fadeInUp" data-wow-delay="200ms">
                             {/* <!-- Portfolio Thumbnail --> */}
-                            <div className="portfolio-thumbnail bg-img" style={{backgroundImage: "url(assets/img/bg-img/21.jpg)"}}></div>
+                            <div className="portfolio-thumbnail bg-img" style={{ backgroundImage: "url(assets/img/bg-img/21.jpg)" }}></div>
                             {/* <!-- Portfolio Hover Text --> */}
                             <div className="portfolio-hover-overlay">
                                 <a href="img/bg-img/21.jpg" className="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 6">
@@ -361,7 +375,7 @@ export default function Welcome() {
                         {/* <!-- Single Portfolio Area --> */}
                         <div className="col-12 col-lg-6 single_portfolio_item home-design wow fadeInUp" data-wow-delay="300ms">
                             {/* <!-- Portfolio Thumbnail --> */}
-                            <div className="portfolio-thumbnail bg-img" style={{backgroundImage: "url(assets/img/bg-img/22.jpg)"}}></div>
+                            <div className="portfolio-thumbnail bg-img" style={{ backgroundImage: "url(assets/img/bg-img/22.jpg)" }}></div>
                             {/* <!-- Portfolio Hover Text --> */}
                             <div className="portfolio-hover-overlay">
                                 <a href="img/bg-img/22.jpg" className="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
@@ -665,7 +679,7 @@ export default function Welcome() {
             {/* <!-- ##### Blog Area End ##### --> */}
 
             {/* <!-- ##### Subscribe Area Start ##### --> */}
-            <section className="subscribe-newsletter-area" style={{backgroundImage: "url(assets/img/bg-img/subscribe.png)"}}>
+            <section className="subscribe-newsletter-area" style={{ backgroundImage: "url(assets/img/bg-img/subscribe.png)" }}>
                 <div className="container">
                     <div className="row align-items-center justify-content-between">
                         <div className="col-12 col-lg-5">
@@ -679,7 +693,7 @@ export default function Welcome() {
                             <div className="subscribe-form">
                                 <form action="#" method="get">
                                     <input type="email" name="subscribe-email" id="subscribeEmail" placeholder="Enter your email" />
-                                        <button type="submit" className="btn alazea-btn">SUBSCRIBE</button>
+                                    <button type="submit" className="btn alazea-btn">SUBSCRIBE</button>
                                 </form>
                             </div>
                         </div>

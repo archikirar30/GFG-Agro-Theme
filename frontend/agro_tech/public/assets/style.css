@@ -2637,6 +2637,76 @@ img {
   .portfolio-details-meta:last-child {
     margin-bottom: 0; }
 
+/* Login */
+}
+.login-box a.fp:hover, .myaccount-form a:hover {
+	color: #1b5e20;
+}
+.login-box {
+	background: #66bb6a;
+	width: 100%;
+	float: left;
+	border-radius: 5px;
+	padding: 30px;
+}
+.login-box h3 {
+	color: #fff;
+	font-weight: 700;
+	margin: 0 0 30px;
+}
+.login-box input.form-control {
+	height: 53px;
+	line-height: 51px;
+	border-color: #fff;
+	background: #fff;
+}
+.login-box label.form-check-label {
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.login-box a.fp {
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.login-box a.fp {
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0 0 0 50px;
+	text-decoration: underline;
+}
+.login-box button.login-btn {
+	background: #fff;
+	border: 0;
+	width: 100%;
+	height: 53px;
+	border-radius: 5px;
+	line-height: 53px;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
+}
+
+.login-box button.login-btn:hover, .myaccount-form button.register:hover {
+	background: #1b5e20;
+	color: #fff;
+}
+
+.login-box .input-group, .myaccount-form .input-group {
+	margin-bottom: 30px;
+}
+
+.fp-text strong {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	font-size: 16px;
+	color: #689f38;
+}
 /* ======= The End ======= */
 
 /*# sourceMappingURL=style.css.map */
