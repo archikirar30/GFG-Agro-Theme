@@ -1,5 +1,5 @@
-const express = require('express');
-const routes = require('./lib/route');
+const express = require("express");
+const routes = require('./lib/routes/routes');
 const app = express();
 
 app.use(express.json());
@@ -14,4 +14,14 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(3000,() => console.log('Server is running on port 3000'));
+// simple route
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to designmycodes application." });
+});
+
+// set port, listen for requests
+app.listen(3000, () => {
+  console.log("Server is running on port 3000.");
+});
+
+
