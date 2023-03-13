@@ -23,8 +23,8 @@ export default function Header() {
                                 <div className="top-header-content d-flex align-items-center justify-content-between">
                                     {/* <!-- Top Header Content --> */}
                                     <div className="top-header-meta">
-                                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i className="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: infodeercreative@gmail.com</span></a>
-                                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i className="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +1 234 122 122</span></a>
+                                        <a href="mailto:cropwisesupport@gmail.com" data-toggle="tooltip" data-placement="bottom" title="cropwisesupport@gmail.com"><i className="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: cropwisesupport@gmail.com</span></a>
+                                        <a href="tel:+91 834 122 1222" data-toggle="tooltip" data-placement="bottom" title="+91 834 122 1222"><i className="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +91 834 122 1222</span></a>
                                     </div>
 
                                     {/* <!-- Top Header Content --> */}

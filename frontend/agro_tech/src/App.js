@@ -10,6 +10,7 @@ import Shop from './Components/Shop'
 import Cart from './Components/Cart'
 import Portfolio from './Components/Portfolio'
 import Register from './Components/Register';
+import RegistrationForm from './Components/RegistrationForm';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/cart' element={ <Cart /> } />
         <Route path='/portfolio' element={ <Portfolio /> } />
         <Route path='/authenticate' element={ <Register /> } />
+        <Route path='/shubham' element={ <RegistrationForm /> } />
       </Routes>
       
       <Footer></Footer>
