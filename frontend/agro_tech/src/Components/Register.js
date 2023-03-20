@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios';
+import GoogleLogin from 'react-google-login';
 
 export default function Register() {
 
@@ -16,6 +17,8 @@ export default function Register() {
     const [pincode, setPincode] = useState("");
     const [message, setmessage] = useState("");
     const [loginmsg, setLoginmsg] = useState("")
+    const [loginemail, setLoginemail] = useState("");
+    const [loginpassword, setLoginpassword] = useState("");
 
     // Function to do Signup
     async function singUp(e) {
@@ -38,7 +41,15 @@ export default function Register() {
         const res = await axios.post('http://localhost:3000/register', stores);
         console.log(res.data.message);
         setmessage(res.data.message);
-        
+        if (res.data.message == "The user has been successfully inserted.") {
+            alert(res.data.message)
+            document.getElementById("registration_form").reset();
+            setUsername(""); setDistrict(""); setEmail("");
+            setFirstname(""); setLastname(""); setPhone("");
+            setPassword(""); setPincode(""); setUserstate("");
+            // setmessage("")
+        }
+
         // try {
         // const res = await axios.post('http://localhost:3000/register', {
         //     headers: {
@@ -71,31 +82,43 @@ export default function Register() {
         //     body: JSON.stringify(stores),
         // }).then((res) => res.json()).then((data) => console.log(data)).catch((err) => console.log(err.message))
 
-
     }
 
     // Function for Login
     async function Login(e) {
         e.preventDefault();
 
-        let login_cred = { email, password }
-        // let result = await axios.post('http://localhost:3000/login', login_cred)
-        // console.log(JSON.stringify(result));
-        // console.log(result.data.message);
-        // setLoginmsg(result.data.message)
+        let login_cred = { "email":loginemail, "password":loginpassword }
 
-        fetch("http://localhost:3000/login", {
+        console.log(login_cred)
+
+        let result = await fetch("http://localhost:3000/login", {
             method: 'POST',
             headers: {
                 "Content-Type": 'application/json',
                 "Accept": 'application/json'
             },
             body: JSON.stringify(login_cred),
-        }).then((res) => res.json())
-        .then((data) => console.log(data))
-        .catch((err) => console.log(err.message))
+        });
+        result = await result.json();
+        console.log(result.message);
+        setLoginmsg(result.message)
+        if(loginmsg != null){
+            setLoginemail('');
+            setLoginpassword('');
+            setTimeout(() => {
+                setLoginmsg('')
+            }, 4000);
+        }
+        localStorage.setItem('login-info',JSON.stringify(result));
+        // history.push("/add");
 
     }
+
+    const responseGoogle = (response) => {
+        console.log(response);
+    }
+
 
     return (
         <>
@@ -129,7 +152,7 @@ export default function Register() {
                             <div className="myaccount-form">
                                 <h3>Register Your Account</h3>
                                 <div className="alert">{message}</div>
-                                <form>
+                                <form id='registration_form'>
                                     <ul className="row">
                                         <li className="col-md-6 my-2">
                                             <div className="input-group form-floating">
@@ -205,11 +228,11 @@ export default function Register() {
                                 <form>
                                     <div className="input-group my-3">
                                         <input type="text" className="form-control" placeholder="Username/Email" required
-                                            value={email} onChange={(e) => setEmail(e.target.value)} />
+                                            value={loginemail} onChange={(e) => setLoginemail(e.target.value)} />
                                     </div>
                                     <div className="input-group my-3">
                                         <input type="password" className="form-control" placeholder="Password" required
-                                            value={password} onChange={(e) => setPassword(e.target.value)} />
+                                            value={loginpassword} onChange={(e) => setLoginpassword(e.target.value)} />
                                     </div>
                                     <div className="input-group form-check">
                                         <input type="checkbox" className="form-check-input" id="exampleCheck2" />
@@ -220,6 +243,24 @@ export default function Register() {
                                         <button onClick={Login} className="login-btn">Login Account</button>
                                     </div>
                                 </form>
+                                {/* <!-- Social buttons and divider --> */}
+                                <div className="row">
+
+                                    {/* <!-- Social btn --> */}
+                                    <div className="input-group my-3">
+                                        <GoogleLogin
+                                            buttonText='Login with Google'
+                                            clientId='252102314879-rr5qdra1j8nredtjr6etrl1tkmv26jqf.apps.googleusercontent.com'
+                                            onSuccess={responseGoogle}
+                                            onFailure={responseGoogle}
+                                            cookiePolicy={'single_host_origin'}
+                                        />
+                                    </div>
+                                    {/* <!-- Social btn --> */}
+                                    <div className="input-group my-3">
+                                        <button className="login-btn"><i className="bi bi-facebook text-white me-2"></i>Login with Facebook</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

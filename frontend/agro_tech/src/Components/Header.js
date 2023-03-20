@@ -2,6 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Header() {
+
+    function Authenticated(){
+        if(1==1){
+            return <li><Link to={'/authenticate'}>Register/Login</Link></li>;
+        }
+    }
+
     return (
         <>
             {/* <!-- Preloader --> */}
@@ -90,7 +97,7 @@ export default function Header() {
                                             <li><Link to={'/portfolio'}>Portfolio</Link></li>
                                             <li><Link to={'/contact'}>Contact</Link></li>
                                             <li><Link to={'/blog'}>Blogs</Link></li>
-                                            <li><Link to={'/authenticate'}>Register/Login</Link></li>
+                                            <Authenticated />
                                         </ul>
 
                                         {/* <!-- Search Icon --> */}
